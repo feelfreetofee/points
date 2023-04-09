@@ -46,7 +46,7 @@ Citizen.CreateThread(function()
 	while true do
 		sleep = 1000
 		coords = GetEntityCoords(PlayerPedId())
-		for id, point in ipairs(points) do
+		for id, point in pairs(points) do
 			if point.marker or point.action then
 				local distance = #(coords - point.coords)
 				if distance < point.range then
